@@ -1,0 +1,86 @@
+.content {
+    position: relative;
+    width: calc(100% - 230px);
+    left: 230px;
+    nav {
+        height: 56px;
+        background: var(--light);
+        padding: 0 24px 0 0;
+        display: flex;
+        align-items: center;
+        grid-gap: 24px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        overflow-x: hidden;
+        a {
+            color: var(--dark)
+        }
+        .bx {
+            &.bx-menu {
+                cursor: pointer;
+                color: var(--dark);
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            bottom: -40px;
+            left: 0px;
+            border-radius: 50%;
+            box-shadow: -20px -20px 0 var(--light);
+        }
+        form {
+            max-width: 400px;
+            width: 100%;
+            margin-right: auto;
+            .form-input {
+                display: flex;
+                align-items: center;
+                height: 36px;
+                input {
+                    flex-grow: 1;
+                    padding: 0 16px;
+                    height: 100%;
+                    border: none;
+                    background: var(--grey);
+                    border-radius: 36px 0 0 36px;
+                    outline: none;
+                    width: 100%;
+                    color: var(--dark);
+                }
+                button {
+                    width: 80px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: var(--primary);
+                    color: var(--light);
+                    font-size: 18px;
+                    border: none;
+                    outline: none;
+                    border-radius: 0px 36px 36px 0;
+                    cursor: pointer;
+                }
+            }
+        }
+        .notif {
+            font-size: 20px;
+            position: relative;
+            .count {
+                position: absolute;
+                top: -6px;
+                right: -6px;
+                width: 20px;
+                height: 20px;
+                background: var(--danger);
+                border-radius: 50%;
+                color: var(--light);
+            }
+        }
+    }
+}
