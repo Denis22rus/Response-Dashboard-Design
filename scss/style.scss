@@ -3,6 +3,7 @@
 @import "_nullstyle.scss";
 @import "_sidebar.scss";
 @import "_content.scss";
+@import "_media.scss";
 
 :root {
     --light: #f6f6f9;
@@ -30,7 +31,6 @@ body {
 
 /* ----------------*/
 .wrapper {
-    overflow: hidden;
     min-height: 100%;
 }
 

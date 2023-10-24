@@ -1,13 +1,23 @@
 function burger () {
-    const menuIcon = document.querySelector('.icon-menu');
-    const menuBody = document.querySelector('.menu__body');
-    if (menuIcon) {
-    menuIcon.addEventListener("click", function (e) {
-        document.body.classList.toggle('lock');
-        menuIcon.classList.toggle('active');
-        menuBody.classList.toggle('active');
-        });
-    }
+    const menuBar = document.querySelector('.content nav .bx.bx-menu');
+    const sideBar = document.querySelector('.sidebar');
+
+    menuBar.addEventListener('click', () => {
+        sideBar.classList.toggle('close');
+
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 768) {
+            sideBar.classList.add('close');
+        } else {
+            sideBar.classList.remove('close');
+        }
+        if (window.innerWidth > 576) {
+            searchBtnIcon.classList.replace('bx-x', 'bx-search');
+            searchForm.classList.remove('show');
+        }
+    });
 }
 
 module.exports = burger;

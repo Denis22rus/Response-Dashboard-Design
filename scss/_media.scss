@@ -1,0 +1,49 @@
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        width: calc(100% - 60px);
+        left: 200px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .content {
+        nav {
+            form {
+                &.show {
+                    .form-input {
+                        input {
+                            display: block;
+                            width: 100%;
+                            button {
+                                width: 36px;
+                                height: 100%;
+                                color: var(--light);
+                                background: var(--danger);
+                                border-radius: 0 36px 36px 0;
+                            }
+                        }
+                    }
+                }
+                .form-input {
+                    button {
+                        width: auto;
+                        height: auto;
+                        background: transparent;
+                        color: var(--dark);
+                        border-radius: none;
+                    }
+                    input {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .content nav form.show~.notif, .content nav form.show~.profile {
+        display: none;
+    }
+}
